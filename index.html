@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  <script src="./script.js"></script>
+  <title>Calculator</title>
+</head>
+<body>
+  <div>
+    <table style="margin: auto">
+      <tr>
+        <td id="sciout">
+          <div>
+            <div id="sciInPut">
+              &nbsp;
+            </div>
+            <div id="sciOutPut">
+              0
+            </div>
+          </div>
+          <div style="padding-top: 3px; width: 100%">
+            <div>
+              <span onclick="input('sin')" class="scifunc">sin</span
+              ><span onclick="input('cos')" class="scifunc">cos</span
+              ><span onclick="input('tan')" class="scifunc">tan</span
+              ><span class="scird"
+                ><label for="scirdsettingd"
+                  ><input
+                  id="scirdsettingd"
+                  type="radio"
+                  name="scirdsetting"
+                  value="deg"
+                  onClick="cnDegreeRadians='degree';"
+                  checked
+                  />Deg</label
+                ><label for="scirdsettingr"
+                  ><input
+                  id="scirdsettingr"
+                  type="radio"
+                  name="scirdsetting"
+                  value="rad"
+                  onClick="cnDegreeRadians='radians';"
+                  />Rad</label
+                ></span
+              >
+            </div>
+            <div>
+              <span onclick="input('asin')" class="scifunc"
+                >sin<sup>-1</sup></span
+              ><span onclick="input('acos')" class="scifunc"
+                >cos<sup>-1</sup></span
+              ><span onclick="input('atan')" class="scifunc"
+                >tan<sup>-1</sup></span
+              ><span onclick="input('pi')" class="scifunc">&#960;</span
+              ><span onclick="input('e')" class="scifunc">e</span>
+            </div>
+            <div>
+              <span onclick="input('pow')" class="scifunc">x<sup>y</sup></span
+              ><span onclick="input('x3')" class="scifunc">x<sup>3</sup></span
+              ><span onclick="input('x2')" class="scifunc">x<sup>2</sup></span
+              ><span onclick="input('ex')" class="scifunc">e<sup>x</sup></span
+              ><span onclick="input('10x')" class="scifunc"
+                >10<sup>x</sup></span
+              >
+            </div>
+            <div>
+              <span onclick="input('apow')" class="scifunc"
+                ><sup>y</sup>&#8730;x</span
+              ><span onclick="input('3x')" class="scifunc"
+                ><sup>3</sup>&#8730;x</span
+              ><span onclick="input('sqrt')" class="scifunc">&#8730;x</span
+              ><span onclick="input('ln')" class="scifunc">ln</span
+              ><span onclick="input('log')" class="scifunc">log</span>
+            </div>
+            <div>
+              <span onclick="input('(')" class="scifunc">(</span
+              ><span onclick="input(')')" class="scifunc">)</span
+              ><span onclick="input('1/x')" class="scifunc">1/x</span
+              ><span onclick="input('pc')" class="scifunc">%</span
+              ><span onclick="input('n!')" class="scifunc">n!</span>
+            </div>
+          </div>
+          <div style="padding-top: 3px">
+            <div>
+              <span onclick="input(7)" class="scinm">7</span
+              ><span onclick="input(8)" class="scinm">8</span
+              ><span onclick="input(9)" class="scinm">9</span
+              ><span onclick="input('+')" class="sciop">+</span
+              ><span onclick="input('bk')" class="sciop">Back</span>
+            </div>
+            <div>
+              <span onclick="input(4)" class="scinm">4</span
+              ><span onclick="input(5)" class="scinm">5</span
+              ><span onclick="input(6)" class="scinm">6</span
+              ><span onclick="input('-')" class="sciop">&ndash;</span
+              ><span onclick="input('ans')" class="sciop">Ans</span>
+            </div>
+            <div>
+              <span onclick="input(1)" class="scinm">1</span
+              ><span onclick="input(2)" class="scinm">2</span
+              ><span onclick="input(3)" class="scinm">3</span
+              ><span onclick="input('*')" class="sciop">&#215;</span
+              ><span onclick="input('M+')" class="sciop">M+</span>
+            </div>
+            <div>
+              <span onclick="input(0)" class="scinm">0</span
+              ><span onclick="input('.')" class="scinm">.</span
+              ><span onclick="input('EXP')" class="sciop">EXP</span
+              ><span onclick="input('/')" class="sciop">&#247;</span
+              ><span onclick="input('M-')" class="sciop">M-</span>
+            </div>
+            <div>
+              <span onclick="input('+/-')" class="sciop">&#177;</span
+              ><span onclick="input('RND')" class="sciop">RND</span
+              ><span onclick="input('AC')" class="scieq">AC</span
+              ><span onclick="input('HC')" class="scieq">HC</span
+              ><span onclick="input('=')" class="scieq">=</span
+              ><span onclick="input('MR')" class="sciop" id="scimrc">MR</span>
+            </div>
+          </div>
+          <div id="scihistory"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
